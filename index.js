@@ -7,6 +7,10 @@ let tip = {
     setTip: function (percentage) {
         this.percentage = percentage;
         this.isSet = true;
+    },
+    resetTip: function () {
+        this.percentage = 0.0,
+            this.isSet = false
     }
 };
 
@@ -86,7 +90,7 @@ function getPresetTip(e) {
 
 function getTipAndTotal() {
     let tipAmountPerPerson, total;
-    
+
     if (tip.isSet === false) {
         document.querySelector("section.select-tip").classList.add("error-border");
         document.querySelector("section.select-tip span.error").textContent = "Select A Tip";
@@ -100,5 +104,16 @@ function getTipAndTotal() {
     total = (billImport / peopleNumber) + tipAmountPerPerson;
     document.querySelector("#tip-per-person").textContent = `$ ${tipAmountPerPerson.toFixed(2)}`;
     document.querySelector("#total-per-person").textContent = `$ ${total.toFixed(2)}`;
-    
+
+    // reset all after 2 mins
+    setTimeout(() => {
+        tip.resetTip();
+        document.querySelector("#tip-per-person").textContent = "$ 0.00";
+        document.querySelector("#total-per-person").textContent = "$ 0.00";
+        document.querySelector(".container .output .tip-per-person div span.total-tip-amount").textContent = "Tip Amount (0%)";
+        document.querySelector("#bill-amount").value = "";
+        document.querySelector("#custom-tip").value = "";
+        document.querySelector("#people-number").value = "";
+    }, 5000);
+
 }
