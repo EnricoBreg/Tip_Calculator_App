@@ -114,6 +114,6 @@ function getTipAndTotal() {
         document.querySelector("#bill-amount").value = "";
         document.querySelector("#custom-tip").value = "";
         document.querySelector("#people-number").value = "";
-    }, 5000);
+    }, 120000);
 
 }
