@@ -98,12 +98,12 @@ function getTipAndTotal() {
             document.querySelector("section.select-tip").classList.remove("error-border");
             document.querySelector("section.select-tip span.error").textContent = "";
         }, 3000);
+    } else {
+        tipAmountPerPerson = (billImport / peopleNumber) * tip.percentage;
+        total = (billImport / peopleNumber) + tipAmountPerPerson;
+        document.querySelector("#tip-per-person").textContent = `$ ${tipAmountPerPerson.toFixed(2)}`;
+        document.querySelector("#total-per-person").textContent = `$ ${total.toFixed(2)}`;
     }
-
-    tipAmountPerPerson = (billImport / peopleNumber) * tip.percentage;
-    total = (billImport / peopleNumber) + tipAmountPerPerson;
-    document.querySelector("#tip-per-person").textContent = `$ ${tipAmountPerPerson.toFixed(2)}`;
-    document.querySelector("#total-per-person").textContent = `$ ${total.toFixed(2)}`;
 
     // reset all after 2 mins
     setTimeout(() => {
