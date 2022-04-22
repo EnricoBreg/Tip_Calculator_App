@@ -23,10 +23,10 @@ Users should be able to:
 - Generate a new tip by clicking the button
 
 
-### Screenshot
+### Screenshots
 
-![](.screenshots/screenshot_1.png)
-![](.screenshots/screenshot_2.png)
+![](./screenshots/screenshot_1.png)
+![](./screenshots/screenshot_2.png)
 
 
 ### Links
