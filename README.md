@@ -1,3 +1,5 @@
+# Tip Calculator App | Frontend Mentor Challenge Solution
+
 This is a solution to the [Tip Calculator App challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
@@ -30,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/EnricoBreg/Tip_Calculator_App.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://6262e698bd01fb11e7273315--statuesque-empanada-7ce17d.netlify.app/)
 
 ### Built with
 
