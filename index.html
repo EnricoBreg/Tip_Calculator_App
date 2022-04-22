@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+
+    <div class="logo">
+        <img src="images/logo.svg" alt="splitter-logo">
+    </div>
+
+    <div class="container">
+        <section class="bill-total-amount">
+            <div>
+                <label for="bill-amount">Bill</label>
+                <span class="error"></span>
+            </div>
+            <input type="number" name="bill-amount" id="bill-amount" min="0" placeholder="0.00">
+        </section>
+
+        <section class="select-tip">
+            <div>
+                <span>Select Tip %</span>
+                <span class="error"></span>
+            </div>
+            <div class="tip-button-group">
+                <button class="preset-tip-button">5%</button>
+                <button class="preset-tip-button">10%</button>
+                <button class="preset-tip-button">15%</button>
+                <button class="preset-tip-button">25%</button>
+                <button class="preset-tip-button">50%</button>
+                <input type="number" min="5" max="100" id="custom-tip" class="custom-tip" placeholder="Custom">
+            </div>
+        </section>
+
+        <section class="people-number">
+            <div>
+                <label for="people">Number of People</label>
+                <span class="error"></span>
+            </div>
+            <input type="number" class="people-input" id="people-number" name="people" placeholder="0">
+        </section>
+
+        <section class="output">
+            <!-- tip per person ouput -->
+            <div class="tip-per-person">
+                <div>
+                    <span class="total-tip-amount">Tip Amount (0%)</span>
+                    <span class="per-person">/ person</span>
+                </div>
+                <span class="amount" id="tip-per-person">$ 0.00</span>
+            </div>
+            <!-- total per person output -->
+            <div class="total-per-person">
+                <div>
+                    <span class="total-tip-amount">Total </span>
+                    <span class="per-person">/ person</span>
+                </div>
+                <span class="amount" id="total-per-person">$ 0.00</span>
+            </div>
+            <!-- reset button -->
+            <div class="reset">
+                <button id="reset">RESET</button>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/EnricoBreg">Enrico Bregoli</a>.
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

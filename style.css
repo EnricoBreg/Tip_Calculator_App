@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Space Mono", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+body {
+    background: hsl(185, 41%, 84%);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 80px auto 60px auto;
+}
+
+.container {
+    color: hsl(184, 14%, 56%);
+    background: hsl(0, 0%, 100%);
+    max-width: 1280px;
+    padding: 30px 40px;
+    margin: 0 auto 100px auto;
+    border-radius: 15px;
+
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.error {
+    color: #ff0000;
+}
+
+.error-outline {
+    outline: 2px solid #ff0000;
+}
+
+.error-border {
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+}
+
+.selection {
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    border: 1px solid hsl(172, 67%, 45%);
+}
+
+/* Bill */
+.container .bill-total-amount {
+    grid-column: 1 / 2;
+}
+
+.container .bill-total-amount input {
+    font-size: 28px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 20px 10px 0;
+    text-align: end;
+    border: none;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+
+    background-color: hsl(189, 41%, 97%);
+    background-image: url("images/icon-dollar.svg");
+    background-position: 20px center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+.container .bill-total-amount div {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Select tip */
+.container .select-tip {
+    grid-column: 1 / 2;
+    width: 100%;
+}
+
+.container .select-tip div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .select-tip .tip-button-group {
+    margin-top: 10px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, minmax(90px, 1fr));
+}
+
+.container .select-tip button {
+    width: auto;
+    padding: 10px 5px;
+    font-size: 28px;
+    border: none;
+    border-radius: 5px;
+    background: hsl(183, 100%, 15%);
+    color: hsl(189, 41%, 97%);
+    cursor: pointer;
+}
+
+.container .select-tip input {
+    width: auto;
+    padding: 10px 20px 10px 0;
+    text-align: end;
+    font-size: 28px;
+    border: none;
+    border-radius: 5px;
+    background: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+}
+
+/* People */
+.container .people-number {
+    grid-column: 1 / 2;
+}
+
+.container .people-number div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .people-number input {
+    font-size: 28px;
+    text-align: end;
+    width: 100%;
+    margin: 10px auto 15px auto;
+    padding: 10px 20px 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+
+    background-color: hsl(189, 41%, 97%);
+    background-image: url("images/icon-person.svg");
+    background-position: 20px center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+
+/* Output */
+.container .output {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    border-radius: 10px;
+    background: hsl(183, 100%, 15%);
+    padding: 40px 60px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.container .output span.amount {
+    color: hsl(172, 67%, 45%);
+    font-size: 42px;
+}
+
+.container .output div span.per-person {
+    color: hsl(184, 14%, 56%);
+    font-size: 0.9em;
+}
+
+.container .output .total-tip-amount {
+    color: hsl(189, 41%, 97%);
+    font-size: 1.1em;
+}
+
+.container .output .tip-per-person {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .output .tip-per-person div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .output .total-per-person {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .output .total-per-person div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .output .reset {
+    margin-top: auto;
+    width: 100%;
+}
+
+.container .output .reset button {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    border: none;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(186, 14%, 43%);
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Active states */
+.container .bill-total-amount input:focus,
+.container .select-tip input:focus,
+.container .people-number input:focus 
+{
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+.container .output .reset button:hover, .container .select-tip button:hover  {
+    transition: 0.2s ease-out;
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+
+/* Footer attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+@media(max-width: 800px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container .output {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    .container .output .reset {
+        margin-top: 80px;
+    }
+}
+
+@media(max-width: 550px) {
+    .container .select-tip .tip-button-group {
+        grid-template-columns: repeat(2, minmax(200px, auto));
+    }
+}
+
+@media(max-width: 500px) {
+    .container .select-tip .tip-button-group {
+        grid-template-columns: 1fr;
+    }
+
+    .container .select-tip .tip-button-group input {
+        width: 100%;
+    }
+}
+
+@media(max-width: 470px) {
+    .container .output .tip-per-person {
+        flex-direction: column;
+    }
+    .container .output .tip-per-person div {
+        justify-self: center;
+        align-self: center;
+        flex-direction: row;
+    }
+    .container .output .tip-per-person .amount {
+        justify-self: center;
+        align-self: center;
+    }
+
+    .container .output .total-per-person {
+        flex-direction: column;
+    }
+    .container .output .total-per-person div {
+        flex-direction: row;
+        align-self: center;
+        justify-self: center;
+    }
+    .container .output .total-per-person .amount {
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .container .output span.per-person {
+        margin-left: 20px;
+    }
+
+}
